@@ -1,4 +1,4 @@
-angular.module('app.controllers', [])
+angular.module('reminder.controllers', [])
 
 .controller('loginCtrl', function($scope) {
   $scope.fbLogin = function() {
@@ -15,10 +15,34 @@ angular.module('app.controllers', [])
   }
 })
 
-.controller('pOCtrl', function($scope) {
+.controller('pOCtrl', ['$scope','userService', '$ionicSlideBoxDelegate',
+  function($scope, userService, $ionicSlideBoxDelegate) {
 
-})
+    userService.getUsersOfWeek().query({})
+    .$promise.then(function(data) {
+      console.log(data);
+      $scope.usersOfWeek = data;
+      $ionicSlideBoxDelegate.slide(0);
+      $ionicSlideBoxDelegate.update();
+    });
+
+}])
 
 .controller('leiteCtrl', function($scope) {
 
 })
+
+.controller('profileCtrl', function($scope) {
+    openFB.api({
+        path: '/me',
+        params: {fields: 'id,name'},
+        success: function(user) {
+            $scope.$apply(function() {
+                $scope.user = user;
+            });
+        },
+        error: function(error) {
+            alert('Facebook error: ' + error.error_description);
+        }
+    });
+});
