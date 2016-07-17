@@ -1,63 +1,17 @@
 <ion-view style="" class=" " id="page2" title="Pão ">
     <ion-content class="has-header" padding="true">
       <ion-slide-box>
-        <ion-slide>
-          <div id="pO-card21" class="list card ">
+         <ion-slide ng-repeat="user in usersOfWeek">
+           <div id="pO-card21" class="list card">
               <ion-item style="text-align:center" class="  " id="pO-list-item1">Hoje</ion-item>
               <div style="border-radius: 50%;height:200px;width: 200px;margin: 0px auto; background-color: rgb(232, 235, 239); text-align: center;">
-                  <img style="border-radius: 50%;height:200px;width: 200px;margin: 0px auto; background-color: rgb(232, 235, 239); text-align: center;" src="http://www.gravatar.com/avatar/2b788af6d60099706c5f2cd0ac2f1170" ng-src="http://www.gravatar.com/avatar/2b788af6d60099706c5f2cd0ac2f1170" alt="Eric Perin" class="circle">
+                  <img style="border-radius: 50%;height:200px;width: 200px;margin: 0px auto; background-color: rgb(232, 235, 239); text-align: center;" 
+                  src="http://www.gravatar.com/avatar/{{user.idfacebook}}" ng-src="http://www.gravatar.com/avatar/{{user.idfacebook}}" alt="{{user.name}}" 
+                  class="circle">
               </div>
-              <ion-item style="text-align:center" class="  " id="pO-list-item4">Olá! Hoje eu quem trago o pão!</ion-item>
+              <ion-item style="text-align:center" class="  " id="pO-list-item4">{{user.name}}</ion-item>              
           </div>
-        </ion-slide>
-        <ion-slide>
-          <div id="pO-card21" class="list card ">
-              <ion-item style="text-align:center" class="  " id="pO-list-item1">Segunda</ion-item>
-              <div style="border-radius: 50%;height:200px;width: 200px;margin: 0px auto; background-color: rgb(232, 235, 239); text-align: center;">
-                  <img style="border-radius: 50%;height:200px;width: 200px;margin: 0px auto; background-color: rgb(232, 235, 239); text-align: center;" src="http://www.gravatar.com/avatar/3c87acdd8d0555a3e98bf053bd585875" ng-src="http://www.gravatar.com/avatar/3c87acdd8d0555a3e98bf053bd585875" alt="Junior" class="circle">
-              </div>
-              <ion-item style="text-align:center" class="  " id="pO-list-item4">Olá! Segunda eu quem trago o pão!</ion-item>
-          </div>
-        </ion-slide>
-        <ion-slide>
-          <div id="pO-card21" class="list card ">
-              <ion-item style="text-align:center" class="  " id="pO-list-item1">Terça</ion-item>
-              <div style="border-radius: 50%;height:200px;width: 200px;margin: 0px auto; background-color: rgb(232, 235, 239); text-align: center;">
-                  <img style="border-radius: 50%;height:200px;width: 200px;margin: 0px auto; background-color: rgb(232, 235, 239); text-align: center;" src="http://www.gravatar.com/avatar/611637102b51879ef1992ec351c60e4b" ng-src="http://www.gravatar.com/avatar/611637102b51879ef1992ec351c60e4b" alt="Rousseau" class="circle">
-              </div>
-              <ion-item style="text-align:center" class="  " id="pO-list-item4">Olá! Terça eu quem trago o pão!</ion-item>
-          </div>
-        </ion-slide>
-        <ion-slide>
-          <div id="pO-card21" class="list card ">
-              <ion-item style="text-align:center" class="  " id="pO-list-item1">Quarta</ion-item>
-              <div style="border-radius: 50%;height:200px;width: 200px;margin: 0px auto; background-color: rgb(232, 235, 239); text-align: center;">
-                  <img style="border-radius: 50%;height:200px;width: 200px;margin: 0px auto; background-color: rgb(232, 235, 239); text-align: center;" src="http://www.gravatar.com/avatar/853fba70137e958bf2a2934e56fb8759" ng-src="http://www.gravatar.com/avatar/853fba70137e958bf2a2934e56fb8759" alt="Dyego" class="circle">
-              </div>
-              <ion-item style="text-align:center" class="  " id="pO-list-item4">Olá! Quarta eu quem trago o pão!</ion-item>
-          </div>
-        </ion-slide>
-        <ion-slide>
-          <div id="pO-card21" class="list card ">
-              <ion-item style="text-align:center" class="  " id="pO-list-item1">Quinta</ion-item>
-              <div style="border-radius: 50%;height:200px;width: 200px;margin: 0px auto; background-color: rgb(232, 235, 239); text-align: center;">
-                  <img style="border-radius: 50%;height:200px;width: 200px;margin: 0px auto; background-color: rgb(232, 235, 239); text-align: center;" src="http://www.gravatar.com/avatar/615cabc2da223f6b1ba9f71cf4ae2e4d" ng-src="http://www.gravatar.com/avatar/615cabc2da223f6b1ba9f71cf4ae2e4d" alt="James" class="circle">
-              </div>
-              <ion-item style="text-align:center" class="  " id="pO-list-item4">Olá! Quinta eu quem trago o pão!</ion-item>
-          </div>
-        </ion-slide>
-        <ion-slide>
-          <div id="pO-card21" class="list card ">
-              <ion-item style="text-align:center" class="  " id="pO-list-item1">Sexta</ion-item>
-              <div style="border-radius: 50%;height:200px;width: 200px;margin: 0px auto; background-color: rgb(232, 235, 239); text-align: center;">
-                  <img style="border-radius: 50%;height:200px;width: 200px;margin: 0px auto; background-color: rgb(232, 235, 239); text-align: center;" src="http://www.gravatar.com/avatar/8ed4a4c770437baeb88dbe5126f765ab" ng-src="http://www.gravatar.com/avatar/8ed4a4c770437baeb88dbe5126f765ab" alt="Cleiton" class="circle">
-              </div>
-              <ion-item style="text-align:center" class="  " id="pO-list-item4">Olá! Sexta eu quem trago o pão!</ion-item>
-          </div>
-        </ion-slide>
-      </ion-slide-box>
-
-
-
+        </ion-slide> 
+     </ion-slide-box>
     </ion-content>
 </ion-view>
