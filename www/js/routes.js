@@ -1,4 +1,4 @@
-angular.module('app.routes', [])
+angular.module('reminder.routes', [])
 
 // .config(
 //   //openFB.init({appId: '123456'})
@@ -49,6 +49,16 @@ angular.module('app.routes', [])
       }
     }
   })
+
+  .state('main.profile', {
+  url: "/profile",
+  views: {
+      'menuContent' :{
+          templateUrl: "templates/profile.html",
+          controller: "ProfileCtrl"
+      }
+  }
+})
 
   $urlRouterProvider.otherwise('/page/login')
 

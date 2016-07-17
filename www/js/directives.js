@@ -1,6 +1,5 @@
-angular.module('app.directives', [])
+angular.module('reminder.directives', [])
 
-.directive('blankDirective', [function(){
+.directive('blankDirectve', [function(){
 
 }]);
-
