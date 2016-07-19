@@ -20,11 +20,28 @@ angular.module('reminder.controllers', [])
 
     userService.getUsersOfWeek().query({})
     .$promise.then(function(data) {
-      console.log(data);
+      //console.log(data);
       $scope.usersOfWeek = data;
       $ionicSlideBoxDelegate.slide(0);
       $ionicSlideBoxDelegate.update();
     });
+
+    $scope.setDone = function(iduser) {
+      var today = new Date();
+      var historic = {
+        "userid" : iduser,
+        "date"   : today 
+      };
+
+      //console.log(historic);
+
+      userService.setDone(historic).query({})
+      .$promise.then(function(data) {
+        //console.log(data);
+      });
+
+      //console.log('User '+iduser+' setDone');
+    };
 
 }])
 
