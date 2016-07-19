@@ -38,3 +38,6 @@ jspm_packages
 
 #Build Folders
 platforms
+
+#Lib Folder
+www/lib/

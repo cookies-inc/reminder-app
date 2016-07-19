@@ -3,13 +3,14 @@
       <ion-slide-box>
          <ion-slide ng-repeat="user in usersOfWeek">
            <div id="pO-card21" class="list card">
-              <ion-item style="text-align:center" class="  " id="pO-list-item1">Hoje</ion-item>
+              <ion-item style="text-align:center" class="  " id="pO-list-item1">Next <time> </time></ion-item>
               <div style="border-radius: 50%;height:200px;width: 200px;margin: 0px auto; background-color: rgb(232, 235, 239); text-align: center;">
                   <img style="border-radius: 50%;height:200px;width: 200px;margin: 0px auto; background-color: rgb(232, 235, 239); text-align: center;" 
                   src="http://www.gravatar.com/avatar/{{user.idfacebook}}" ng-src="http://www.gravatar.com/avatar/{{user.idfacebook}}" alt="{{user.name}}" 
                   class="circle">
               </div>
-              <ion-item style="text-align:center" class="  " id="pO-list-item4">{{user.name}}</ion-item>              
+              <ion-item style="text-align:center" class="  " id="pO-list-item4">{{user.name}}</ion-item>
+              <ion-item style="text-align:center" class="  " id="pO-list-item4">More info.</ion-item><button ng-click="setDone({{user.id}})" class="button button-block button-positive">Send Done!</button>              
           </div>
         </ion-slide> 
      </ion-slide-box>
